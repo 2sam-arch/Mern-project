@@ -21,7 +21,12 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: (origin, callback) => {
+    callback(null, origin || true); // allow all origins
+  },
+  credentials: true
+}))
 app.use(compression());
 app.use(cookieParser());
 app.use(express.json());

@@ -58,7 +58,7 @@ router.route('/admins').get(protect, admin, admins);
 router.post('/reset-password/request', validator.resetPasswordRequest, validateRequest, resetPasswordRequest);
 router.post('/reset-password/reset/:id/:token', validator.resetPassword, validateRequest, resetPassword);
 router.post('/login', validator.checkLogin, validateRequest, loginUser);
-router.post('/logout', protect, logoutUser);
+router.post('/logout', logoutUser);
 
 router
   .route('/profile')

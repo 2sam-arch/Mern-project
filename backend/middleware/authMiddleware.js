@@ -4,6 +4,7 @@ import jwt from 'jsonwebtoken';
 // Middleware to protect routes by verifying JWT authentication token.
 const protect = async (req, res, next) => {
   try {
+    console.log(req.cookies,"request,,,,")
     const token = req.cookies.jwt;
 
     if (!token) {
