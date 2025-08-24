@@ -1,4 +1,4 @@
-export const BASE_URL ='http://localhost:5000'
+export const BASE_URL ='https://mern-project-f0f0.onrender.com';
 // process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : '';
 // export const BASE_URL = 'https://mern-project-f0f0.onrender.com';
 export const PRODUCTS_URL = '/api/v1/products';
